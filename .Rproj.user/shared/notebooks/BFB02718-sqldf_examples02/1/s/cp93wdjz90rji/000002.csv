@@ -1,0 +1,4 @@
+"0","```r
+diamonds.good <- subset(diamonds, cut=='Good')
+print(diamonds.good)
+```"

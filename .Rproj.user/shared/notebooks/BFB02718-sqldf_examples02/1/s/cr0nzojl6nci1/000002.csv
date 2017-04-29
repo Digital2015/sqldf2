@@ -1,0 +1,7 @@
+"0","```r
+library(dplyr)
+nycflights13_sqlite(path = \"C:/Users/Eric A. Suess/Documents\")
+```"
+"1","src:  sqlite 3.8.6 [C:/Users/Eric A. Suess/Documents/nycflights13.sqlite]
+tbls: airlines, airports, flights, planes, sqlite_stat1, weather
+"

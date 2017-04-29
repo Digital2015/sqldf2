@@ -1,0 +1,5 @@
+"0","```r
+library(sqldf)
+goodDiamonds <- sqldf(\"select * from diamonds where cut='Good' \")
+print(goodDiamonds)
+```"

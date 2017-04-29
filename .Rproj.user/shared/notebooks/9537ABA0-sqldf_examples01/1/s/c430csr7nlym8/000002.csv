@@ -1,0 +1,4 @@
+"0","```r
+ggplot(gapminder, aes(x = log10(gdpPercap), y = lifeExp)) +
+  geom_point() + scale_x_log10() + geom_point(aes(color = continent))
+```"

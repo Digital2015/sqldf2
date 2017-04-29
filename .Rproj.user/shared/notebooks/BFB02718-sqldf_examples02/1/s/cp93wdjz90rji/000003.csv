@@ -1,0 +1,4 @@
+"0","```r
+diamonds.good.means <- with(diamonds.good, aggregate(cbind(carat,price) ~ color, FUN=mean))
+print(diamonds.good.means)
+```"

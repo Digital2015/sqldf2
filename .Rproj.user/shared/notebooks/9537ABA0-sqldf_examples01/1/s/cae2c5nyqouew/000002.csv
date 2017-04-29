@@ -1,0 +1,4 @@
+"0","```r
+diamonds.clarity <- with(diamonds, aggregate(cbind(carat,price) ~ clarity, FUN=mean))
+print(diamonds.clarity)
+```"

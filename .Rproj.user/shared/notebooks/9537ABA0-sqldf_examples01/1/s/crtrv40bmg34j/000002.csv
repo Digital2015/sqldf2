@@ -1,0 +1,4 @@
+"0","```r
+diamonds.cut <- with(diamonds, aggregate(cbind(carat,price) ~ cut, FUN=mean))
+print(diamonds.cut)
+```"

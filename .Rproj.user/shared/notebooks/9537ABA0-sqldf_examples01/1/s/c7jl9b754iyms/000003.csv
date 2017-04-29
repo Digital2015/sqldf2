@@ -1,0 +1,6 @@
+"0","```r
+Americas <- sqldf(\"SELECT * FROM gapminder 
+                  WHERE continent='Asia' AND year = '2007' AND lifeExp > 75 
+                  ORDER BY lifeExp DESC\")
+print(Americas)
+```"
