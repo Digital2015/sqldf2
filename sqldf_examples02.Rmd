@@ -183,11 +183,44 @@ head(weather)
 
 Some merges:
 
-1. Add the name of the carrier to the flights data table.
+1. Add the planes data to the flights data table by tail number.
+
+
+```{r}
+flights.plane <- sqldf("SELECT flights.year,flights.flight,flights.tailnum,flights.carrier,flights.distance, 
+                       flights.air_time,planes.type,planes.model,planes.engines
+                       FROM flights LEFT JOIN planes ON flights.tailnum = planes.tailnum")
+
+print(flights.plane)
+```
+
+```{r}
+flights_plane <- sqldf("SELECT flights.year,flights.flight,flights.tailnum,flights.carrier,flights.distance, 
+                       flights.air_time,planes.type,planes.model,planes.engines
+                       FROM flights LEFT JOIN planes ON flights.tailnum = planes.tailnum 
+                       ORDER BY flights.distance DESC")
+
+print(flights_plane)
+```
+
 
 2. Add the name of the carrier to the planes data table.
 
 3. Add the information about the planes to the flights data table.  Join the planes data to the flights data on tailnum.
+
+
+```{r}
+flights_plane_name <- sqldf("SELECT flights_plane.carrier, airlines.name,
+                       flights_plane.year,flights_plane.flight,flights_plane.tailnum,flights_plane.carrier,
+                       flights_plane.distance, flights_plane.air_time,flights_plane.type,
+                       flights_plane.model,flights_plane.engines
+                       FROM flights_plane LEFT JOIN airlines ON flights_plane.carrier = airlines.carrier")
+
+print(flights_plane_name)
+```
+
+
+
 
 
 
