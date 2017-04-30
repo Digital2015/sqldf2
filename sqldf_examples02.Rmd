@@ -181,6 +181,16 @@ head(planes)
 head(weather)
 ```
 
+Some merges:
+
+1. Add the name of the carrier to the flights data table.
+
+2. Add the name of the carrier to the planes data table.
+
+3. Add the information about the planes to the flights data table.  Join the planes data to the flights data on tailnum.
+
+
+
 
 Save the file to an sqlite dataset.
 
